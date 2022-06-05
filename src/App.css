@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  color: #000;
+  font-family: 'Muli', sans-serif;
+  font-size: 1rem;
+  background-color: #d1583d;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1em;
+  margin: 10px;
+  border-radius: 1em;
+  max-width: 768px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-shadow: 0px 17px 34px -20px #f55951;
+  box-shadow: 0px 17px 34px -20px #f55951;
+}
+
+.card img {
+  border-radius: 0.5em;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 350px;
+  width: 250px;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card__container {
+  position: relative;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  margin-left: 1.4em;
+}
+
+.card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.7em 0;
+}
+
+.card__button {
+  padding: 15px 30px;
+  white-space: nowrap;
+  font-family: 'Questrial Bold', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background-color: #e93f61;
+  color: white;
+  border-radius: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.card__button:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.health__labels {
+  display: inline-block;
+  background-color: #ffcc65;
+  color: #282c34;
+  border-radius: 1.6rem;
+  font-size: 1.2rem;
+  margin: 2px 4px;
+  padding: 5px;
+}
+.search__form {
+  width: 350px;
+  position: relative;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.search__bar {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 15px 45px 15px 15px;
+  border-radius: 6px;
+  border: 1px solid #282c34;
+  transition: all 0.4s;
+}
+
+.search__button {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left: -45px;
+  border: none;
+  color: #6c6c6c;
+  transition: all 0.4s;
+  z-index: 10;
+}
+
+.search__button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 720px) {
+  .card {
+    display: block;
+  }
+  .search__bar {
+    width: 100%;
+  }
+}
